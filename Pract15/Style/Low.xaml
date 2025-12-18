@@ -1,0 +1,83 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="LowStockProductStyle" TargetType="Border">
+        <Setter Property="CornerRadius" Value="5"/>
+        <Setter Property="Padding" Value="8"/>
+        <Setter Property="Margin" Value="0,2"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Stock}" Value="9">
+                <Setter Property="BorderBrush" Value="{StaticResource LowStockBrush}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="8">
+                <Setter Property="BorderBrush" Value="{StaticResource LowStockBrush}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="7">
+                <Setter Property="BorderBrush" Value="{StaticResource LowStockBrush}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="6">
+                <Setter Property="BorderBrush" Value="{StaticResource LowStockBrush}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="5">
+                <Setter Property="BorderBrush" Value="{StaticResource LowStockBrush}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="4">
+                <Setter Property="BorderBrush" Value="{StaticResource LowStockBrush}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="3">
+                <Setter Property="BorderBrush" Value="{StaticResource LowStockBrush}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="2">
+                <Setter Property="BorderBrush" Value="{StaticResource LowStockBrush}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="1">
+                <Setter Property="BorderBrush" Value="{StaticResource LowStockBrush}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="0">
+                <Setter Property="BorderBrush" Value="Red"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="LowStockTextStyle" TargetType="Run">
+        <Setter Property="Text" Value=""/>
+        <Setter Property="Foreground" Value="Red"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Stock}" Value="0">
+                <Setter Property="Text" Value=" (Нет в наличии!)"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="1">
+                <Setter Property="Text" Value=" (Остался 1!)"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="2">
+                <Setter Property="Text" Value=" (Осталось 2!)"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="3">
+                <Setter Property="Text" Value=" (Осталось 3!)"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="4">
+                <Setter Property="Text" Value=" (Осталось 4!)"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="5">
+                <Setter Property="Text" Value=" (Осталось 5!)"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="6">
+                <Setter Property="Text" Value=" (Осталось 6!)"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="7">
+                <Setter Property="Text" Value=" (Осталось 7!)"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="8">
+                <Setter Property="Text" Value=" (Осталось 8!)"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Stock}" Value="9">
+                <Setter Property="Text" Value=" (Осталось 9!)"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

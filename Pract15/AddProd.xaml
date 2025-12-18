@@ -1,0 +1,262 @@
+﻿<Page x:Class="Pract15.AddProd"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Pract15"
+      xmlns:validators="clr-namespace:Pract15.Validstors"
+      xmlns:converters="clr-namespace:Pract15.Converters"
+      Background="{StaticResource BackgroundBrush}"
+      Title="Управление товарами">
+
+    <Page.Resources>
+        <converters:DecimalConverter x:Key="DecimalConverter"/>
+    </Page.Resources>
+  <ScrollViewer>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+
+        <Border Grid.Row="0" 
+                Background="{StaticResource WhiteBrush}" 
+                CornerRadius="5" 
+                Margin="0,0,0,10" 
+                Padding="20">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel Width="450" HorizontalAlignment="Center">
+                    <TextBlock Text="Добавление товара" 
+                               FontSize="22" 
+                               FontWeight="Bold" 
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,25"
+                               Foreground="{StaticResource TextBrush}"/>
+
+                    <!-- Название товара -->
+                    <Label FontSize="14" Foreground="{StaticResource TextBrush}">Название товара *</Label>
+                    <TextBox x:Name="txtName" Style="{StaticResource ValidatingTextBoxStyle}">
+                        <TextBox.Text>
+                            <Binding Path="CurrentProduct.Name"
+                 UpdateSourceTrigger="PropertyChanged"
+                 NotifyOnValidationError="True">
+                                <Binding.ValidationRules>
+                                    <validators:NotEmptyRuleProd/>
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+                        <TextBlock Foreground="Red"
+           FontSize="11"
+           Margin="0,2,0,10">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Text" Value=""/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=txtName,
+                                       Path=(Validation.HasError)}"
+                             Value="True">
+                                            <Setter Property="Text"
+                            Value="{Binding ElementName=txtName,
+                                            Path=(Validation.Errors)[0].ErrorContent}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    
+                        <Label FontSize="14" Foreground="{StaticResource TextBrush}" Margin="0,10,0,0">Описание</Label>
+                    <TextBox x:Name="txtDescription" 
+                             Height="80"
+                             Margin="0,0,0,15"
+                             AcceptsReturn="True"
+                             TextWrapping="Wrap"
+                             Style="{StaticResource ValidatingTextBoxStyle}">
+                        <TextBox.Text>
+                            <Binding Path="CurrentProduct.Description"
+             UpdateSourceTrigger="PropertyChanged"
+             NotifyOnValidationError="True">
+                                <Binding.ValidationRules>
+                                    <validators:NotEmptyDescriptionRule/>
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+
+                    </TextBox>
+                    <TextBlock Foreground="Red"
+           FontSize="11"
+           Margin="0,2,0,10">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Text" Value=""/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=txtDescription,
+                                       Path=(Validation.HasError)}"
+                             Value="True">
+                                        <Setter Property="Text"
+                            Value="{Binding ElementName=txtDescription,
+                                            Path=(Validation.Errors)[0].ErrorContent}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+
+                    <Label FontSize="14" Foreground="{StaticResource TextBrush}">Цена *</Label>
+                    <TextBox x:Name="txtPrice" Style="{StaticResource ValidatingTextBoxStyle}">
+                        <TextBox.Text>
+                            <Binding Path="CurrentProduct.Price"
+                 UpdateSourceTrigger="PropertyChanged"
+                 NotifyOnValidationError="True">
+                                <Binding.ValidationRules>
+                                    <validators:DecimalPositive/>
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+                    <TextBlock Foreground="Red"
+           FontSize="11"
+           Margin="0,2,0,10">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Text" Value=""/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=txtPrice,
+                                       Path=(Validation.HasError)}"
+                             Value="True">
+                                        <Setter Property="Text"
+                            Value="{Binding ElementName=txtPrice,
+                                            Path=(Validation.Errors)[0].ErrorContent}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+
+                    <Label FontSize="14" Foreground="{StaticResource TextBrush}" Margin="0,10,0,0">Количество на складе *</Label>
+                    <TextBox x:Name="txtStock" Style="{StaticResource ValidatingTextBoxStyle}">
+                        <TextBox.Text>
+                            <Binding Path="CurrentProduct.Stock"
+                 UpdateSourceTrigger="PropertyChanged"
+                 NotifyOnValidationError="True">
+                                <Binding.ValidationRules>
+                                    <validators:IntPositiveRule/>
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+                    <TextBlock Foreground="Red"
+           FontSize="11"
+           Margin="0,2,0,10">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Text" Value=""/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=txtStock
+,
+                                       Path=(Validation.HasError)}"
+                             Value="True">
+                                        <Setter Property="Text"
+                            Value="{Binding ElementName=txtStock,
+                                            Path=(Validation.Errors)[0].ErrorContent}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+
+                    <Label FontSize="14" Foreground="{StaticResource TextBrush}" Margin="0,10,0,0">Рейтинг (0-5)</Label>
+                    <TextBox x:Name="txtRating" Style="{StaticResource ValidatingTextBoxStyle}">
+                        <TextBox.Text>
+                            <Binding Path="CurrentProduct.Rating"
+                 UpdateSourceTrigger="PropertyChanged"
+                 NotifyOnValidationError="True"
+                 Converter="{StaticResource DecimalConverter}">
+                                <Binding.ValidationRules>
+                                    <validators:RatingRule/>
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+
+
+
+                    <TextBlock Foreground="Red"
+           FontSize="11"
+           Margin="0,2,0,10">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Text" Value=""/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=txtRating,
+                                       Path=(Validation.HasError)}"
+                             Value="True">
+                                        <Setter Property="Text"
+                            Value="{Binding ElementName=txtRating,
+                                            Path=(Validation.Errors)[0].ErrorContent}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+
+                    <Label FontSize="14" Foreground="{StaticResource TextBrush}" Margin="0,10,0,0">Категория *</Label>
+                    <ComboBox x:Name="cmbCategory" 
+                              ItemsSource="{Binding Categories}"
+                              DisplayMemberPath="Name"
+                              SelectedValuePath="Id"
+                              SelectedValue="{Binding CurrentProduct.CategoryId}"/>
+
+                    <Label FontSize="14" Foreground="{StaticResource TextBrush}" Margin="0,10,0,0">Бренд *</Label>
+                    <ComboBox x:Name="cmbBrand" 
+                              ItemsSource="{Binding Brands}"
+                              DisplayMemberPath="Name"
+                              SelectedValuePath="Id"
+                              SelectedValue="{Binding CurrentProduct.BrandId}"/>
+
+                    <Label FontSize="14" Foreground="{StaticResource TextBrush}" Margin="0,15,0,5">Теги</Label>
+                    <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="3" Padding="10" Height="120">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <ItemsControl ItemsSource="{Binding AllTags}">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapPanel/>
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <CheckBox Content="{Binding Name}" 
+                                                  IsChecked="{Binding IsSelected}"
+                                                  Margin="0,0,15,5"
+                                                  VerticalAlignment="Center"/>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </ScrollViewer>
+                    </Border>
+
+                    <StackPanel Orientation="Horizontal" 
+                                HorizontalAlignment="Center" 
+                                Margin="0,20,0,0">
+                        <Button x:Name="btnSave"
+                                Style="{StaticResource AddButton}"
+                                Click="SaveButton_Click"
+                                Margin="0,0,10,0"
+                                Width="120"
+                                Height="40">
+                            Сохранить
+                        </Button>
+                        <Button Style="{StaticResource AddButton}"
+                                Click="BackButton_Click"
+                                Width="120"
+                                Height="40">
+                            Назад
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+    </ScrollViewer>
+</Page>

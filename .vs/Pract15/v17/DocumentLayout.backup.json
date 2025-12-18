@@ -1,0 +1,163 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u0416\u0435\u043A\u0430\\Desktop\\Pract15\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{50FBEB91-6E4C-4D27-97B5-DE552966F2FE}|Pract15\\Pract15.csproj|c:\\users\\\u0436\u0435\u043A\u0430\\desktop\\pract15\\pract15\\addbrands.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{50FBEB91-6E4C-4D27-97B5-DE552966F2FE}|Pract15\\Pract15.csproj|solutionrelative:pract15\\addbrands.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50FBEB91-6E4C-4D27-97B5-DE552966F2FE}|Pract15\\Pract15.csproj|c:\\users\\\u0436\u0435\u043A\u0430\\desktop\\pract15\\pract15\\glavn.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{50FBEB91-6E4C-4D27-97B5-DE552966F2FE}|Pract15\\Pract15.csproj|solutionrelative:pract15\\glavn.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50FBEB91-6E4C-4D27-97B5-DE552966F2FE}|Pract15\\Pract15.csproj|c:\\users\\\u0436\u0435\u043A\u0430\\desktop\\pract15\\pract15\\glavn.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{50FBEB91-6E4C-4D27-97B5-DE552966F2FE}|Pract15\\Pract15.csproj|solutionrelative:pract15\\glavn.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50FBEB91-6E4C-4D27-97B5-DE552966F2FE}|Pract15\\Pract15.csproj|c:\\users\\\u0436\u0435\u043A\u0430\\desktop\\pract15\\pract15\\reg.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{50FBEB91-6E4C-4D27-97B5-DE552966F2FE}|Pract15\\Pract15.csproj|solutionrelative:pract15\\reg.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50FBEB91-6E4C-4D27-97B5-DE552966F2FE}|Pract15\\Pract15.csproj|c:\\users\\\u0436\u0435\u043A\u0430\\desktop\\pract15\\pract15\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{50FBEB91-6E4C-4D27-97B5-DE552966F2FE}|Pract15\\Pract15.csproj|solutionrelative:pract15\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50FBEB91-6E4C-4D27-97B5-DE552966F2FE}|Pract15\\Pract15.csproj|c:\\users\\\u0436\u0435\u043A\u0430\\desktop\\pract15\\pract15\\addtags.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{50FBEB91-6E4C-4D27-97B5-DE552966F2FE}|Pract15\\Pract15.csproj|solutionrelative:pract15\\addtags.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50FBEB91-6E4C-4D27-97B5-DE552966F2FE}|Pract15\\Pract15.csproj|c:\\users\\\u0436\u0435\u043A\u0430\\desktop\\pract15\\pract15\\addprod.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{50FBEB91-6E4C-4D27-97B5-DE552966F2FE}|Pract15\\Pract15.csproj|solutionrelative:pract15\\addprod.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50FBEB91-6E4C-4D27-97B5-DE552966F2FE}|Pract15\\Pract15.csproj|c:\\users\\\u0436\u0435\u043A\u0430\\desktop\\pract15\\pract15\\addcategor.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{50FBEB91-6E4C-4D27-97B5-DE552966F2FE}|Pract15\\Pract15.csproj|solutionrelative:pract15\\addcategor.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 386,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Glavn.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0416\u0435\u043A\u0430\\Desktop\\Pract15\\Pract15\\Glavn.xaml",
+              "RelativeDocumentMoniker": "Pract15\\Glavn.xaml",
+              "ToolTip": "C:\\Users\\\u0416\u0435\u043A\u0430\\Desktop\\Pract15\\Pract15\\Glavn.xaml",
+              "RelativeToolTip": "Pract15\\Glavn.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-18T14:59:29.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0416\u0435\u043A\u0430\\Desktop\\Pract15\\Pract15\\App.xaml",
+              "RelativeDocumentMoniker": "Pract15\\App.xaml",
+              "ToolTip": "C:\\Users\\\u0416\u0435\u043A\u0430\\Desktop\\Pract15\\Pract15\\App.xaml",
+              "RelativeToolTip": "Pract15\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-18T15:52:01.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AddProd.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0416\u0435\u043A\u0430\\Desktop\\Pract15\\Pract15\\AddProd.xaml",
+              "RelativeDocumentMoniker": "Pract15\\AddProd.xaml",
+              "ToolTip": "C:\\Users\\\u0416\u0435\u043A\u0430\\Desktop\\Pract15\\Pract15\\AddProd.xaml",
+              "RelativeToolTip": "Pract15\\AddProd.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-18T14:59:04.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddTags.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0416\u0435\u043A\u0430\\Desktop\\Pract15\\Pract15\\AddTags.xaml",
+              "RelativeDocumentMoniker": "Pract15\\AddTags.xaml",
+              "ToolTip": "C:\\Users\\\u0416\u0435\u043A\u0430\\Desktop\\Pract15\\Pract15\\AddTags.xaml",
+              "RelativeToolTip": "Pract15\\AddTags.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-18T14:59:19.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Reg.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0416\u0435\u043A\u0430\\Desktop\\Pract15\\Pract15\\Reg.xaml",
+              "RelativeDocumentMoniker": "Pract15\\Reg.xaml",
+              "ToolTip": "C:\\Users\\\u0416\u0435\u043A\u0430\\Desktop\\Pract15\\Pract15\\Reg.xaml",
+              "RelativeToolTip": "Pract15\\Reg.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-18T14:59:47.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Glavn.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0416\u0435\u043A\u0430\\Desktop\\Pract15\\Pract15\\Glavn.xaml.cs",
+              "RelativeDocumentMoniker": "Pract15\\Glavn.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0416\u0435\u043A\u0430\\Desktop\\Pract15\\Pract15\\Glavn.xaml.cs",
+              "RelativeToolTip": "Pract15\\Glavn.xaml.cs",
+              "ViewState": "AgIAAOYAAAAAAAAAAAA1wDkBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T15:46:25.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddBrands.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0416\u0435\u043A\u0430\\Desktop\\Pract15\\Pract15\\AddBrands.xaml",
+              "RelativeDocumentMoniker": "Pract15\\AddBrands.xaml",
+              "ToolTip": "C:\\Users\\\u0416\u0435\u043A\u0430\\Desktop\\Pract15\\Pract15\\AddBrands.xaml",
+              "RelativeToolTip": "Pract15\\AddBrands.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-18T14:55:47.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddCategor.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0416\u0435\u043A\u0430\\Desktop\\Pract15\\Pract15\\AddCategor.xaml",
+              "RelativeDocumentMoniker": "Pract15\\AddCategor.xaml",
+              "ToolTip": "C:\\Users\\\u0416\u0435\u043A\u0430\\Desktop\\Pract15\\Pract15\\AddCategor.xaml",
+              "RelativeToolTip": "Pract15\\AddCategor.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-18T14:58:48.993Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 14,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

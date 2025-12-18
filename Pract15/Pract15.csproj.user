@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="AddBrands.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddCategor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddProd.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddTags.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Glavn.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Reg.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

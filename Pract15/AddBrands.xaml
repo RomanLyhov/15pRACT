@@ -1,0 +1,150 @@
+﻿<Page x:Class="Pract15.AddBrands"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Pract15"
+      xmlns:validators="clr-namespace:Pract15.Validstors"
+      Background="{StaticResource BackgroundBrush}">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" 
+                    Background="{StaticResource WhiteBrush}" 
+                    CornerRadius="5" 
+                    Margin="0,0,0,10" 
+                    Padding="20">
+                <StackPanel Width="400" HorizontalAlignment="Center">
+                    <TextBlock Text="Добавление брендов" 
+                               FontSize="20" 
+                               FontWeight="Bold" 
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,15"
+                               Foreground="{StaticResource TextBrush}"/>
+
+                    <Label FontSize="14" Foreground="{StaticResource TextBrush}">Название бренда *</Label>
+                    <TextBox x:Name="txtBrandName" Style="{StaticResource ValidatingTextBoxStyle}">
+                        <TextBox.Text>
+                            <Binding Path="CurrentBrand.Name"
+                                     Mode="TwoWay"
+                                     UpdateSourceTrigger="PropertyChanged"
+                                     NotifyOnValidationError="True">
+                                <Binding.ValidationRules>
+                                    <validators:NotEmptyRuleиbRA/>
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+                    <TextBlock Foreground="Red"
+                               FontSize="11"
+                               Margin="0,2,0,10">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Text" Value=""/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=txtBrandName, Path=(Validation.HasError)}" Value="True">
+                                        <Setter Property="Text" Value="{Binding ElementName=txtBrandName, Path=(Validation.Errors)[0].ErrorContent}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                        <Button x:Name="btnSave"
+                                Style="{StaticResource AddButton}"
+                                Click="SaveButton_Click"
+                                Margin="0,0,10,0"
+                                Width="120" Height="40">Сохранить</Button>
+                        <Button Style="{StaticResource AddButton}"
+                                Click="BackButton_Click"
+                                Width="120" Height="40">Назад</Button>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="1" 
+                    Background="{StaticResource WhiteBrush}" 
+                    CornerRadius="5" 
+                    Padding="15">
+                <ListView x:Name="lvBrands"
+                          ItemsSource="{Binding Brands}" 
+                          BorderThickness="0"
+                          VerticalAlignment="Stretch">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="ID" Width="60" DisplayMemberBinding="{Binding Id}">
+                                <GridViewColumn.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="ID" FontWeight="Bold" Foreground="{StaticResource TextBrush}"/>
+                                    </DataTemplate>
+                                </GridViewColumn.HeaderTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn Header="Название" Width="300" DisplayMemberBinding="{Binding Name}">
+                                <GridViewColumn.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="Название" FontWeight="Bold" Foreground="{StaticResource TextBrush}"/>
+                                    </DataTemplate>
+                                </GridViewColumn.HeaderTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn Header="Действия" Width="180">
+                                <GridViewColumn.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="Действия" FontWeight="Bold" Foreground="{StaticResource TextBrush}"/>
+                                    </DataTemplate>
+                                </GridViewColumn.HeaderTemplate>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Button Content="Изменить" 
+                                                    Click="EditButton_Click"
+                                                    Tag="{Binding}"
+                                                    ToolTip="Редактировать"
+                                                    Margin="2"
+                                                    Padding="8,4"
+                                                    Height="30"
+                                                    Width="70"
+                                                    Style="{StaticResource AddButton}"/>
+                                            <Button Content="Удалить" 
+                                                    Click="DeleteButton_Click"
+                                                    Tag="{Binding}"
+                                                    ToolTip="Удалить"
+                                                    Margin="2"
+                                                    Padding="8,4"
+                                                    Height="30"
+                                                    Width="70"
+                                                    Style="{StaticResource DeleteButton}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="Padding" Value="10,8"/>
+                            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource BackgroundBrush}"/>
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+                                    <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#F0F0F0"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                </ListView>
+            </Border>
+        </Grid>
+    </ScrollViewer>
+</Page>
